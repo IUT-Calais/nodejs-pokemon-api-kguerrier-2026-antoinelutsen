@@ -1,8 +1,9 @@
 import { PrismaClient } from '@prisma/client'
-const prisma = new PrismaClient()
-
 import { Request, Response } from 'express'
+import bcrypt from "bcrypt"
+import jwt from "jsonwebtoken"
 
+const prisma = new PrismaClient()
 
 export const getAllPokemonCards = async (req: Request, res: Response): Promise<void> => {
   const pokemons = await prisma.pokemonCard.findMany({

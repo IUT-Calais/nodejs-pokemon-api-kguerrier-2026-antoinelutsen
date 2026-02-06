@@ -23,5 +23,10 @@ model PokemonCard {
   size       Float?
   weight     Float?
   imageUrl   String?
+}
 
+model User {
+  id       Int    @id @default(autoincrement())
+  email    String @unique
+  password String
 }
