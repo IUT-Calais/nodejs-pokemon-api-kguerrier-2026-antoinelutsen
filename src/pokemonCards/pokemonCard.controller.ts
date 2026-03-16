@@ -24,6 +24,7 @@ export const getPokemonCardById = async (req: Request, res: Response): Promise<v
     res.status(404).json({
       message: `PokemonCard with id ${id} not found`
     })
+    return
   }
 
   res.status(200).json(pokemon)
