@@ -1,12 +1,12 @@
 import { Router } from "express"
-import { authenticateToken } from "../middlewares/auth.middleware.js"
+import { authenticateToken } from "../middlewares/auth.middleware"
 import {
   getAllPokemonCards,
   getPokemonCardById,
   createPokemonCard,
   updatePokemonCard,
   deletePokemonCard
-} from "./pokemonCard.controller.js"
+} from "./pokemonCard.controller"
 
 const pokemonCardRouter = Router()
 
